@@ -33,4 +33,4 @@ export const TodoList = () => {
       </ul>
     </div>
   );
-}
+};
