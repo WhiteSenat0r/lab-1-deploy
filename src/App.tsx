@@ -1,8 +1,14 @@
 import "./App.css";
 import { TodoList } from "./TodoList";
+import { Counter } from "./Counter";
 
 function App() {
-  return <TodoList />;
+  return (
+    <>
+      <Counter />
+      <TodoList />
+    </>
+  );
 }
 
 export default App;
