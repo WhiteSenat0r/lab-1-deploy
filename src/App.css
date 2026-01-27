@@ -40,3 +40,36 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Todo table styling */
+.todo-table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+.todo-table th,
+.todo-table td {
+  border: 1px solid #646cff;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.todo-table th {
+  background-color: #646cff;
+  color: white;
+  font-weight: bold;
+}
+
+.todo-table tr:nth-child(even) {
+  background-color: rgba(100, 108, 255, 0.1);
+}
+
+.todo-table tr:hover {
+  background-color: rgba(100, 108, 255, 0.2);
+}
+
+.todo-table input[type="checkbox"] {
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
