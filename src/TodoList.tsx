@@ -38,7 +38,7 @@ export const TodoList = () => {
         onChange={(e) => setTask(e.target.value)}
       />
       <button onClick={addTask}>Add</button>
-      <table className="todo-table">
+      <table className={`todo-table${tasks.length > 2 ? ' has-many-rows' : ''}`}>
         <thead>
           <tr>
             <th>Task Name</th>

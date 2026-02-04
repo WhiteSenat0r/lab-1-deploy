@@ -73,3 +73,7 @@
   cursor: pointer;
   margin-right: 0.5rem;
 }
+
+.todo-table.has-many-rows {
+  box-shadow: 0 2px 8px rgba(100, 108, 255, 0.3);
+}
