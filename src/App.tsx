@@ -1,6 +1,6 @@
-import "./App.css";
-import { TodoList } from "./TodoList";
 import { useState, useEffect } from "react";
+import { TodoList } from "src/TodoList";
+import "./App.css";
 
 enum ThemeMode {
   Light = "light",
