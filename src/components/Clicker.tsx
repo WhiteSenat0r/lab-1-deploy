@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Constant for surprise milestone
-const SURPRISE_THRESHOLD = 100;
+const SURPRISE_THRESHOLD: number = 100;
 
 export const Clicker = () => {
   const [clickCount, setClickCount] = useState<number>(0);
