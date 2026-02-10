@@ -1,6 +1,6 @@
 # Todo List Application
 
-A modern todo list application with a counter component, built with React 19, TypeScript, and Vite.
+A modern todo list application with theme toggle and interactive features, built with React 19, TypeScript, and Vite.
 
 ## Tech Stack
 
@@ -11,17 +11,35 @@ A modern todo list application with a counter component, built with React 19, Ty
 
 ## Features
 
-### Counter Component
+### Active Features
+
+#### Theme Toggle
+- Switch between light and dark modes
+- Persistent theme application across the application
+- Clean UI toggle button
+
+#### Secret Button
+- Easter egg feature for user interaction
+
+#### Todo List
+- **Add Tasks:** Create new todo items using text input field
+- **Mark Complete:** Toggle task completion status using interactive checkboxes
+- **Delete Tasks:** Remove individual tasks with dedicated remove buttons
+- **Table View:** Organized display with dynamic styling based on content
+- **Status Tracking:** Clear visual indicators showing Pending or Completed state
+
+### Available Components (Not Currently Rendered)
+
+#### Counter Component
 - Increment and decrement functionality
 - Direct input support with value validation
 - Value limits: -1000 to 1000
 - Reset capability
 
-### Todo List Component
-- Add new tasks
-- Toggle task completion status
-- Remove tasks
-- Visual table display with styling enhancements
+#### Clicker Component
+- Click counter with interactive button
+- Surprise feature at threshold
+- Real-time click count display
 
 ## Getting Started
 
