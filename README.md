@@ -22,11 +22,11 @@ A modern todo list application with theme toggle and interactive features, built
 - Easter egg feature for user interaction
 
 #### Todo List
-- Add new tasks with text input
-- Toggle task completion status with checkboxes
-- Remove tasks individually
-- Visual table display with dynamic styling
-- Status indicators (Pending/Completed)
+- **Add Tasks:** Create new todo items using text input field
+- **Mark Complete:** Toggle task completion status using interactive checkboxes
+- **Delete Tasks:** Remove individual tasks with dedicated remove buttons
+- **Table View:** Organized display with dynamic styling based on content
+- **Status Tracking:** Clear visual indicators showing Pending or Completed state
 
 ### Available Components (Not Currently Rendered)
 
