@@ -10,7 +10,7 @@ export const Clicker = () => {
   };
 
   return (
-    <div>
+    <div className="clicker-text">
       <h1>Clicker</h1>
       <div>
         <p>Click count: {clickCount}</p>
