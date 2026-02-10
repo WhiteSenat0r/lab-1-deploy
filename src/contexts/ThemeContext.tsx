@@ -1,16 +1,7 @@
 import { createContext, useState, useEffect, ReactNode } from "react";
-
-// Define the ThemeMode enum
-export enum ThemeMode {
-  Light = "light",
-  Dark = "dark",
-}
-
-// Define the shape of the context value
-export interface ThemeContextType {
-  theme: ThemeMode;
-  toggleTheme: () => void;
-}
+import { ThemeMode } from "../enums/ThemeMode";
+import { ThemeContextType } from "../interfaces/ThemeContextType";
+import { THEME_ATTRIBUTE } from "../constants/theme";
 
 // Create the context with undefined as initial value
 export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -29,7 +20,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
   // Apply theme to document root element whenever it changes
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute(THEME_ATTRIBUTE, theme);
   }, [theme]);
 
   const value: ThemeContextType = {

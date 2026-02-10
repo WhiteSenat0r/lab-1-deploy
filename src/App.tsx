@@ -2,7 +2,7 @@ import "./App.css";
 import { Counter } from "./Counter";
 import { TodoList } from "./TodoList";
 import { useTheme } from "./hooks/useTheme";
-import { ThemeMode } from "./contexts/ThemeContext";
+import { ThemeMode } from "./enums/ThemeMode";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
