@@ -1,7 +1,6 @@
-import "./App.css";
-import { Counter } from "./Counter";
-import { TodoList } from "./TodoList";
 import { useState, useEffect } from "react";
+import { TodoList } from "src/TodoList";
+import "./App.css";
 
 enum ThemeMode {
   Light = "light",
@@ -32,7 +31,6 @@ function App() {
       <button className="secret-button" onClick={handleSecretButtonClick}>
         Secret Button
       </button>
-      <Counter />
       <TodoList />
     </>
   );
