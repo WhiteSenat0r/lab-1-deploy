@@ -1,5 +1,4 @@
 import "./App.css";
-import { Counter } from "./Counter";
 import { TodoList } from "./TodoList";
 import { useState, useEffect } from "react";
 
@@ -32,7 +31,6 @@ function App() {
       <button className="secret-button" onClick={handleSecretButtonClick}>
         Secret Button
       </button>
-      <Counter />
       <TodoList />
     </>
   );
