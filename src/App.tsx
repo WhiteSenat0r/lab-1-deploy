@@ -3,15 +3,20 @@ import { Counter } from "./Counter";
 import { TodoList } from "./TodoList";
 import { useState, useEffect } from "react";
 
+enum ThemeMode {
+  Light = "light",
+  Dark = "dark",
+}
+
 function App() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<ThemeMode>(ThemeMode.Dark);
 
   const handleSecretButtonClick = () => {
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
   };
 
   const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+    setTheme(prevTheme => prevTheme === ThemeMode.Light ? ThemeMode.Dark : ThemeMode.Light);
   };
 
   // Apply theme to document root element
@@ -22,7 +27,7 @@ function App() {
   return (
     <>
       <button className="theme-toggle" onClick={toggleTheme}>
-        {theme === 'light' ? 'Light' : 'Dark'}
+        {theme === ThemeMode.Light ? 'Light' : 'Dark'}
       </button>
       <button className="secret-button" onClick={handleSecretButtonClick}>
         Secret Button

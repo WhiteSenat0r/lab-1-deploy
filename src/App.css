@@ -81,8 +81,8 @@
 /* Theme toggle button styling */
 .theme-toggle {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.75rem;
+  right: 0.75rem;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   background-color: #646cff;
