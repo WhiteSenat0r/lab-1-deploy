@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SURPRISE_THRESHOLD } from "src/components/clicker.constants";
+import { SURPRISE_THRESHOLD } from "./clicker.constants";
 
 export const Clicker = () => {
   const [clickCount, setClickCount] = useState<number>(0);

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { TodoList } from "src/TodoList";
+import { TodoList } from "./TodoList";
 import "./App.css";
 
 enum ThemeMode {
