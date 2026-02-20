@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { TodoList } from "src/TodoList";
+import { TodoList } from "./TodoList";
+import { PageLayout } from "./components/layout";
 import "./App.css";
 
 enum ThemeMode {
@@ -24,15 +25,25 @@ function App() {
   }, [theme]);
 
   return (
-    <>
-      <button className="theme-toggle" onClick={toggleTheme}>
-        {theme === ThemeMode.Light ? 'Light' : 'Dark'}
-      </button>
-      <button className="secret-button" onClick={handleSecretButtonClick}>
-        Secret Button
-      </button>
-      <TodoList />
-    </>
+    <PageLayout>
+      <div className="space-y-4">
+        <div className="flex gap-4">
+          <button
+            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+            onClick={toggleTheme}
+          >
+            {theme === ThemeMode.Light ? 'Light' : 'Dark'}
+          </button>
+          <button
+            className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors"
+            onClick={handleSecretButtonClick}
+          >
+            Secret Button
+          </button>
+        </div>
+        <TodoList />
+      </div>
+    </PageLayout>
   );
 }
 
