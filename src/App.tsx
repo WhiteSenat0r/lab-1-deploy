@@ -47,22 +47,86 @@ function App() {
         <Header />
 
         {/* Content */}
-        <main className="flex-1 p-8 overflow-auto">
-          <div className="max-w-4xl">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">LLM Providers</h2>
-            <p className="text-gray-600 mb-8">
-              Demo page for testing modal components. Click buttons below to open each modal.
+        <main className="flex-1 p-6 overflow-auto bg-gray-50">
+          {/* Breadcrumb */}
+          <div className="mb-4">
+            <div className="text-xs text-gray-500">
+              Screen / Settings / LLM Providers
+            </div>
+          </div>
+
+          {/* Main Content Area */}
+          <div className="bg-white rounded-lg border border-gray-200 shadow-sm mb-6 overflow-hidden">
+            {/* Tabs */}
+            <div className="border-b border-gray-200 px-6">
+              <div className="flex gap-6">
+                <button className="px-1 py-3 border-b-2 border-gray-900 text-sm font-normal text-gray-900">
+                  LLM Providers
+                </button>
+                <button className="px-1 py-3 border-b-2 border-transparent text-sm font-normal text-gray-600 hover:text-gray-900">
+                  AI Configuration
+                </button>
+                <button className="px-1 py-3 border-b-2 border-transparent text-sm font-normal text-gray-600 hover:text-gray-900">
+                  Notifications
+                </button>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h2 className="text-base font-semibold text-gray-900 mb-1">Beezi Free</h2>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-gray-600">0 / 1 connections</span>
+                  </div>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Your current plan allows one connected LLM provider. Upgrade to connect more.
+                  </p>
+                </div>
+                <button
+                  onClick={() => setSubscriptionOpen(true)}
+                  className="px-4 py-2 bg-gray-900 text-white text-sm font-normal rounded-md hover:bg-gray-800 transition-colors"
+                >
+                  Upgrade plan
+                </button>
+              </div>
+
+              <div className="border-t border-gray-200 pt-6">
+                <h3 className="text-center text-base font-semibold text-gray-900 mb-2">
+                  No connected LLM providers yet
+                </h3>
+                <p className="text-center text-sm text-gray-500 mb-4">
+                  Connect your first provider by selecting one from the options below.
+                </p>
+                <div className="flex justify-center">
+                  <button
+                    onClick={() => setSelectProviderOpen(true)}
+                    className="px-4 py-2 bg-white border border-gray-300 text-gray-700 text-sm font-normal rounded-md hover:bg-gray-50 transition-colors flex items-center gap-2"
+                  >
+                    <span>+</span> Connect account
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Demo Section */}
+          <div className="max-w-5xl">
+            <h2 className="text-base font-semibold text-gray-700 mb-3">Demo Controls</h2>
+            <p className="text-gray-500 text-sm mb-4">
+              Testing controls for modal components
             </p>
 
             {/* Demo buttons */}
             <div className="space-y-4">
-              <div className="p-6 bg-white rounded-lg border border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              <div className="p-5 bg-white rounded-lg border border-gray-200 shadow-sm">
+                <h3 className="text-base font-semibold text-gray-900 mb-3">
                   Provider Connection Flow
                 </h3>
                 <button
                   onClick={() => setSelectProviderOpen(true)}
-                  className="w-full sm:w-auto px-6 py-3 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 transition-colors"
+                  className="w-full sm:w-auto px-5 py-2.5 bg-purple-600 text-white font-normal text-sm rounded-md hover:bg-purple-700 transition-colors"
                 >
                   🔗 Select LLM Provider (Step 1)
                 </button>
@@ -71,13 +135,13 @@ function App() {
                 </p>
               </div>
 
-              <div className="p-6 bg-white rounded-lg border border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              <div className="p-5 bg-white rounded-lg border border-gray-200 shadow-sm">
+                <h3 className="text-base font-semibold text-gray-900 mb-3">
                   Subscription Management
                 </h3>
                 <button
                   onClick={() => setSubscriptionOpen(true)}
-                  className="w-full sm:w-auto px-6 py-3 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 transition-colors"
+                  className="w-full sm:w-auto px-5 py-2.5 bg-purple-600 text-white font-normal text-sm rounded-md hover:bg-purple-700 transition-colors"
                 >
                   💳 View Subscription Plans
                 </button>
@@ -86,20 +150,20 @@ function App() {
                 </p>
               </div>
 
-              <div className="p-6 bg-white rounded-lg border border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              <div className="p-5 bg-white rounded-lg border border-gray-200 shadow-sm">
+                <h3 className="text-base font-semibold text-gray-900 mb-3">
                   Manage Existing Connection
                 </h3>
                 <div className="flex gap-3">
                   <button
                     onClick={() => setEditConnectionOpen(true)}
-                    className="w-full sm:w-auto px-6 py-3 bg-gray-600 text-white font-medium rounded-md hover:bg-gray-700 transition-colors"
+                    className="w-full sm:w-auto px-5 py-2.5 bg-gray-600 text-white font-normal text-sm rounded-md hover:bg-gray-700 transition-colors"
                   >
                     ✏️ Edit Connection
                   </button>
                   <button
                     onClick={() => setDisconnectOpen(true)}
-                    className="w-full sm:w-auto px-6 py-3 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition-colors"
+                    className="w-full sm:w-auto px-5 py-2.5 bg-red-600 text-white font-normal text-sm rounded-md hover:bg-red-700 transition-colors"
                   >
                     🗑️ Disconnect Provider
                   </button>

@@ -53,15 +53,13 @@ body {
 button {
   font-family: inherit;
   cursor: pointer;
+  border: none;
+  background: none;
 }
 
 /* Light theme overrides */
 :root[data-theme="light"] a:hover {
   color: #747bff;
-}
-
-:root[data-theme="light"] button {
-  background-color: #f9f9f9;
 }
 
 /* Fallback for system preference (when no data-theme is set initially) */
@@ -72,8 +70,5 @@ button {
   }
   :root:not([data-theme]) a:hover {
     color: #747bff;
-  }
-  :root:not([data-theme]) button {
-    background-color: #f9f9f9;
   }
 }
