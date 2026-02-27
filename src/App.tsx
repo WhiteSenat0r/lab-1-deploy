@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { TodoList } from "src/TodoList";
+import { Sidebar } from "src/components/Sidebar";
 import "./App.css";
 
 enum ThemeMode {
@@ -24,15 +25,18 @@ function App() {
   }, [theme]);
 
   return (
-    <>
-      <button className="theme-toggle" onClick={toggleTheme}>
-        {theme === ThemeMode.Light ? 'Light' : 'Dark'}
-      </button>
-      <button className="secret-button" onClick={handleSecretButtonClick}>
-        Secret Button
-      </button>
-      <TodoList />
-    </>
+    <div className="app-container">
+      <Sidebar />
+      <main className="app-main">
+        <button className="theme-toggle" onClick={toggleTheme}>
+          {theme === ThemeMode.Light ? 'Light' : 'Dark'}
+        </button>
+        <button className="secret-button" onClick={handleSecretButtonClick}>
+          Secret Button
+        </button>
+        <TodoList />
+      </main>
+    </div>
   );
 }
 
